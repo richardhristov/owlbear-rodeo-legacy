@@ -4,7 +4,7 @@ import { Scene } from "@babylonjs/core/scene";
 import { Vector3, Color4, Matrix } from "@babylonjs/core/Maths/math";
 import { AmmoJSPlugin } from "@babylonjs/core/Physics/Plugins/ammoJSPlugin";
 import { TargetCamera } from "@babylonjs/core/Cameras/targetCamera";
-import Ammo from "ammo.js";
+import Ammo from "ammojs3";
 
 import "@babylonjs/core/Physics/physicsEngineComponent";
 import "@babylonjs/core/Lights/Shadows/shadowGeneratorSceneComponent";
@@ -65,7 +65,7 @@ function DiceInteraction({
         stencil: true,
         // Prevent XR from loading as Safari 15 crashes with this enabled
         // TODO: Remove when https://github.com/BabylonJS/Babylon.js/pull/11121/files released
-        xrCompatible: false
+        xrCompatible: false,
       });
       const scene = new Scene(engine);
       scene.clearColor = new Color4(0, 0, 0, 0);
