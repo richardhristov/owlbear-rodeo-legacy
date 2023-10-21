@@ -1,0 +1,1 @@
+ngrok --config ngrok.yml start --all

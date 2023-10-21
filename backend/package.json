@@ -7,8 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --project ./",
-    "start:dev": "node --es-module-specifier-resolution=node -r dotenv/config ./build/src/index.js",
-    "start": "node --es-module-specifier-resolution=node ./build/src/index.js",
+    "start": "node --require=suppress-experimental-warnings --loader ./loader.js src/index.ts",
     "lint": "eslint src/**/*.ts"
   },
   "dependencies": {
@@ -34,6 +33,9 @@
     "eslint": "^8.12.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
+    "suppress-experimental-warnings": "^1.1.17",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^4.9.3"
   }
 }
