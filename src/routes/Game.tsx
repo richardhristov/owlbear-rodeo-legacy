@@ -7,7 +7,6 @@ import Banner from "../components/banner/Banner";
 import ReconnectBanner from "../components/banner/ReconnectBanner";
 import OfflineBanner from "../components/banner/OfflineBanner";
 import LoadingOverlay from "../components/LoadingOverlay";
-import Link from "../components/Link";
 import MapLoadingOverlay from "../components/map/MapLoadingOverlay";
 import UpgradingLoadingOverlay from "../components/UpgradingLoadingOverlay";
 
@@ -140,8 +139,7 @@ function Game() {
                     >
                       <Box p={1}>
                         <Text as="p" variant="body2">
-                          {peerError} See <Link to="/faq#connection">FAQ</Link>{" "}
-                          for more information.
+                          {peerError} See FAQ for more information.
                         </Text>
                       </Box>
                     </Banner>

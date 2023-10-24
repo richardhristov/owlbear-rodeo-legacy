@@ -1,5 +1,5 @@
 import { Flex } from "theme-ui";
-import { useMedia } from "react-media";
+import { useMedia } from "react-use";
 
 import RadioIconButton from "../RadioIconButton";
 
@@ -55,7 +55,7 @@ function FogToolSettings({ settings, onSettingChange }: FogToolSettingsProps) {
 
   useKeyboard(handleKeyDown);
 
-  const isSmallScreen = useMedia({ query: "(max-width: 799px)" });
+  const isSmallScreen = useMedia("(max-width: 799px)");
   const drawTools = [
     {
       id: "polygon",

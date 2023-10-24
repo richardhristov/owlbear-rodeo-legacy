@@ -2,8 +2,6 @@ import { useState } from "react";
 import { IconButton, Box, Text } from "theme-ui";
 import adapter from "webrtc-adapter";
 
-import Link from "../Link";
-
 import StartStreamModal from "../../modals/StartStreamModal";
 import {
   StreamEndEventHandler,
@@ -36,7 +34,7 @@ function StartStreamButton({
         Browser not supported for audio sharing.
         <br />
         <br />
-        See <Link to="/how-to#sharingAudio">How To</Link> for more information.
+        See How To for more information.
       </Text>
     </Box>
   );
@@ -49,7 +47,7 @@ function StartStreamButton({
         Ensure "Share audio" is selected when sharing.
         <br />
         <br />
-        See <Link to="/how-to#sharingAudio">How To</Link> for more information.
+        See How To for more information.
       </Text>
     </Box>
   );

@@ -1,7 +1,5 @@
 import { Box, Text } from "theme-ui";
 
-import Link from "./Link";
-
 function DatabaseDisabledMessage({ type }: { type: string }) {
   return (
     <Box
@@ -14,8 +12,7 @@ function DatabaseDisabledMessage({ type }: { type: string }) {
       p={1}
     >
       <Text as="p" variant="body2">
-        {type} saving is unavailable. See <Link to="/faq#database">FAQ</Link>{" "}
-        for more information.
+        {type} saving is unavailable. See FAQ for more information.
       </Text>
     </Box>
   );

@@ -18,6 +18,4 @@ declare module "*.bin" {
   const source: string;
   export default source;
 }
-declare module "react-router-hash-link";
 declare module "intersection-observer";
-declare module "ammo.js";

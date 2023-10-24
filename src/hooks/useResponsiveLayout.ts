@@ -1,8 +1,8 @@
-import { useMedia } from "react-media";
+import { useMedia } from "react-use";
 
 function useResponsiveLayout() {
-  const isMediumScreen = useMedia({ query: "(min-width: 500px)" });
-  const isLargeScreen = useMedia({ query: "(min-width: 1500px)" });
+  const isMediumScreen = useMedia("(min-width: 500px)");
+  const isLargeScreen = useMedia("(min-width: 1500px)");
   const screenSize = isLargeScreen
     ? "large"
     : isMediumScreen

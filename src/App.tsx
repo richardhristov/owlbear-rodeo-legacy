@@ -4,10 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import theme from "./theme";
 import Home from "./routes/Home";
 import Game from "./routes/Game";
-import About from "./routes/About";
-import FAQ from "./routes/FAQ";
-import ReleaseNotes from "./routes/ReleaseNotes";
-import HowTo from "./routes/HowTo";
 
 import { AuthProvider } from "./contexts/AuthContext";
 import { SettingsProvider } from "./contexts/SettingsContext";
@@ -26,18 +22,6 @@ function App() {
             <ToastProvider>
               <Router>
                 <Switch>
-                  <Route path="/how-to">
-                    <HowTo />
-                  </Route>
-                  <Route path="/release-notes">
-                    <ReleaseNotes />
-                  </Route>
-                  <Route path="/about">
-                    <About />
-                  </Route>
-                  <Route path="/faq">
-                    <FAQ />
-                  </Route>
                   <Route path="/game/:id">
                     <DatabaseProvider>
                       <UserIdProvider>
