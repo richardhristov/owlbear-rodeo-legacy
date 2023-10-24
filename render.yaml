@@ -37,7 +37,7 @@ services:
   - type: web
     name: Owlbear Rodeo Backend
     runtime: docker
-    region: oregon # optional (defaults to oregon) check other regions here: https://render.com/docs/regions
+    region: frankfurt # optional (defaults to oregon) check other regions here: https://render.com/docs/regions
     plan: free
     branch: main
     rootDir: ./backend
