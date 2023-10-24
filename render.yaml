@@ -2,16 +2,16 @@ services:
   - type: web
     name: Owlbear Rodeo Legacy
     runtime: static
-    buildCommand: yarn build
+    buildCommand: npm run build
     staticPublishPath: ./build
     pullRequestPreviewsEnabled: false
     branch: main
     buildFilter:
       paths:
-      - src/**/*.js
-      - src/**/*.ts
+        - src/**/*.js
+        - src/**/*.ts
       ignoredPaths:
-      - src/**/*.test.js
+        - src/**/*.test.js
     routes:
       - type: rewrite
         source: /*
@@ -24,15 +24,15 @@ services:
         name: X-Robots-Tag
         value: noindex
     envVars:
-        - key: REACT_APP_BROKER_URL
-          fromService:
-            type: web
-            name: "Owlbear Rodeo Backend"
-            envVarKey: RENDER_EXTERNAL_URL
-        - key: REACT_APP_MAINTENANCE
-          value: false
-        - key: REACT_APP_VERSION
-          value: "1.10.2"
+      - key: REACT_APP_BROKER_URL
+        fromService:
+          type: web
+          name: "Owlbear Rodeo Backend"
+          envVarKey: RENDER_EXTERNAL_URL
+      - key: REACT_APP_MAINTENANCE
+        value: false
+      - key: REACT_APP_VERSION
+        value: "1.10.2"
   # A Docker web service
   - type: web
     name: Owlbear Rodeo Backend
